@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Valverde Fuentes - Desarrollador</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2563eb;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.25rem 0;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #d1d5db;
+            padding-bottom: 0.25rem;
+        }
+
+        h3 {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #e5e7eb;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .lang-switch button {
+            margin-left: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            background: #fff;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background-color: #00a2ff;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #71c6ff;
+        }
+
+        [data-lang][style*="display: none"] {
+            display: none !important;
+        }
+    </style>
+    <script>
+        function setLanguage(lang) {
+            const es = document.querySelectorAll('[data-lang="es"]');
+            const en = document.querySelectorAll('[data-lang="en"]');
+            es.forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
+            en.forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
+            localStorage.setItem('preferredLang', lang);
+        }
+        window.onload = () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'es';
+            setLanguage(savedLang);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="lang-switch">
+        <button onclick="setLanguage('es')"><img src="https://flagcdn.com/w20/es.png" alt="Español"></button>
+        <button onclick="setLanguage('en')"><img src="https://flagcdn.com/w20/gb.png" alt="English"></button>
+    </div>
+    <header>
+        <img src="Captura.PNG" alt="Foto de Miguel Valverde Fuentes">
+        <h1>Miguel Valverde Fuentes</h1>
+        <p data-lang="es">Desarrollador Web & Data Manager</p>
+        <p data-lang="en">Web Developer & Data Manager</p>
+
+    </header>
+
+    <main>
+        <section>
+            <h2 data-lang="es">Sobre mí</h2>
+            <h2 data-lang="en">About Me</h2>
+            <p data-lang="es">Soy un desarrollador web con experiencia en Python, PHP, .NET, HTML, CSS, JavaScript y
+                gestión de bases de datos. Proactivo, resolutivo y con gran capacidad de aprendizaje. Me gusta trabajar
+                en equipo y tengo una sólida ética profesional.</p>
+            <p data-lang="en">I am a web developer with experience in Python, PHP, .NET, HTML, CSS, JavaScript, and
+                database management. I am proactive, problem-solving, and a fast learner. I enjoy teamwork and have
+                strong work ethics.</p>
+            <center><a href="CV.pdf" download>
+                    <button data-lang="es">Descargar CV</button>
+                    <button data-lang="en">Download CV</button>
+                </a></center>
+        </section>
+
+        <section>
+            <h2 data-lang="es">Habilidades</h2>
+            <h2 data-lang="en">Skills</h2>
+            <ul>
+                <li data-lang="es">Comunicación efectiva</li>
+                <li data-lang="en">Effective communication</li>
+                <li data-lang="es">Don de gentes</li>
+                <li data-lang="en">People skills</li>
+                <li data-lang="es">Pensamiento analítico</li>
+                <li data-lang="en">Analytical thinking</li>
+                <li data-lang="es">Resolución de problemas</li>
+                <li data-lang="en">Problem-solving</li>
+                <li data-lang="es">Aprendizaje rápido</li>
+                <li data-lang="en">Fast learner</li>
+                <li data-lang="es">Trabajo en equipo</li>
+                <li data-lang="en">Teamwork</li>
+                <li data-lang="es">Soporte técnico</li>
+                <li data-lang="en">Technical support</li>
+                <li data-lang="es">Desarrollo web full stack</li>
+                <li data-lang="en">Full stack web development</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-lang="es">Experiencia Profesional</h2>
+            <h2 data-lang="en">Work Experience</h2>
+
+            <h3>Asociación de Asma Grave de la Región de Murcia</h3>
+            <p data-lang="es"><em>Data Manager / Desarrollador Web (Nov. 2023 – Actualidad)</em></p>
+            <p data-lang="en"><em>Data Manager / Web Developer (Nov. 2023 – Present)</em></p>
+            <p data-lang="es">- Gestión, control y filtrado de datos con HTML, CSS, JavaScript y PHP.<br>- Creación de
+                páginas web con tecnologías modernas.<br>- Administración de hardware y software en Windows y Linux.<br>-
+                Gestión de backups y virtualización avanzada.</p>
+            <p data-lang="en">Data management, control, and filtering with HTML, CSS, JavaScript, and PHP.
+
+                Creation of websites with modern technologies.
+
+                Hardware and software administration on Windows and Linux.
+
+                Backup management and advanced virtualization.</p>
+            <h3>Grupo Oesia – Murcia</h3>
+            <p data-lang="es"><em>Desarrollador .NET (May. 2023 – Ago. 2023)</em></p>
+            <p data-lang="en"><em>.NET Developer (May 2023 – Aug 2023)</em></p>
+            <p data-lang="es">- Desarrollo de aplicaciones .NET utilizando Visual Basic y C# en arquitecturas MVC.<br>-
+                Diseño de interfaces con tecnologías HTML y CSS.<br>- Creación y mantenimiento de bases de datos con MySQL.<br>-
+                Administración de sistemas Windows y Linux.<br>- Gestión de bases de datos y recuperación de datos.<br>-
+                Creación y administración de máquinas virtuales.</p>
+            <p data-lang="en">Development of .NET applications using Visual Basic and C# in MVC architectures.
+
+                Interface design with HTML and CSS technologies.
+
+                Creation and maintenance of databases with MySQL.
+
+                Administration of Windows and Linux systems.
+
+                Database management and data recovery.
+
+                Creation and management of virtual machines.</p>
+            <h3>Syscomed – Murcia</h3>
+            <p data-lang="es"><em>Desarrollador Web (Jul. 2021 – Jun. 2022)</em></p>
+            <p data-lang="en"><em>Web Developer (Jul 2021 – Jun 2022)</em></p>
+            <p data-lang="es">- Desarrollo de aplicaciones utilizando Python y PHP.<br>- Desarrollo eficiente con Python y
+                PHP para soluciones robustas.<br>- Creación de sitios web atractivos con HTML y CSS.<br>- Control de bases de
+                datos para asegurar integridad y acceso rápido.<br>- Testeo de software para garantizar calidad en el
+                proyecto.<br>- Montaje y mantenimiento de hardware.<br>- Administración de sistemas Windows y Linux.<br>- Soporte
+                técnico proactivo y gestión de backups.</p>
+            <p data-lang="en">Development of applications using Python and PHP.
+
+                Efficient development with Python and PHP for robust solutions.
+
+                Creation of attractive websites with HTML and CSS.
+
+                Database control to ensure integrity and fast access.
+
+                Software testing to ensure quality in the project.
+
+                Hardware setup and maintenance.
+
+                Administration of Windows and Linux systems.
+
+                Proactive technical support and backup management.</p>
+        </section>
+
+        <section>
+            <h2 data-lang="es">Formación Académica</h2>
+            <h2 data-lang="en">Education</h2>
+            <ul>
+                <li data-lang="es">Máster en Inteligencia Artificial y Big Data – MEDAC, 2023–2024</li>
+                <li data-lang="en">Master in AI and Big Data – MEDAC, 2023–2024</li>
+                <li data-lang="es">FP Superior en Desarrollo de Aplicaciones Web – UCAM, 2020–2022</li>
+                <li data-lang="en">Higher Degree in Web App Development – UCAM, 2020–2022</li>
+                <li data-lang="es">FP Superior en Desarrollo de Aplicaciones Multiplataforma – MEDAC, En curso</li>
+                <li data-lang="en">Higher Degree in Multi-platform App Development – MEDAC, Ongoing</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-lang="es">Cursos Destacados</h2>
+            <h2 data-lang="en">Relevant Courses</h2>
+            <ul>
+                <li data-lang="es">Scrum Técnico</li>
+                <li data-lang="en">Technical Scrum</li>
+                <li data-lang="es">Curso sobre PHISHING</li>
+                <li data-lang="en">Phishing Course</li>
+                <li data-lang="es">Redacción de e-mails</li>
+                <li data-lang="en">Professional email writing</li>
+                <li data-lang="es">Igualdad de género</li>
+                <li data-lang="en">Gender equality</li>
+                <li data-lang="es">Ética empresarial</li>
+                <li data-lang="en">Business ethics</li>
+                <li data-lang="es">Protección de datos</li>
+                <li data-lang="en">Data protection</li>
+                <li data-lang="es">Gestión del tiempo</li>
+                <li data-lang="en">Time management</li>
+                <li data-lang="es">Introducción a Python</li>
+                <li data-lang="en">Intro to Python</li>
+                <li data-lang="es">Formación en emergencias</li>
+                <li data-lang="en">Training in emergencies</li>
+                <li data-lang="es">Formación en Pantallas de Visualización de Datos (PVDS)</li>
+                <li data-lang="en">Training in Data Visualization Displays (DVS)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-lang="es">Idiomas</h2>
+            <h2 data-lang="en">Languages</h2>
+            <ul>
+                <li data-lang="es">Español – Nativo</li>
+                <li data-lang="en">Spanish – Native</li>
+                <li data-lang="es">Inglés – Avanzado</li>
+                <li data-lang="en">English – Advanced</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 data-lang="es">Contacto</h2>
+            <h2 data-lang="en">Contact</h2>
+            <p><strong>Teléfono / Phone:</strong> +34 605 698 033</p>
+            <p><strong>Email:</strong> miguelvalverdefuentes01@gmail.com</p>
+            <p><strong data-lang="es">Dirección:</strong><strong data-lang="en">Address:</strong> Calle Galdo 1, 1C,
+                Murcia, CP: 30002</p>
+            <p data-lang="es"><strong>Disponibilidad:</strong> Vehículo propio, carnet de conducir, disponibilidad para
+                viajar</p>
+            <p data-lang="en"><strong>Availability:</strong> Own vehicle, driving license, willing to travel</p>
+            <form action="https://formspree.io/f/xyzwwlev" method="POST">
+                <label for="name" data-lang="es">Nombre:</label>
+                <label for="name" data-lang="en">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" data-lang="es">Correo:</label>
+                <label for="email" data-lang="en">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message" data-lang="es">Mensaje:</label>
+                <label for="message" data-lang="en">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" data-lang="es">Enviar</button>
+                <button type="submit" data-lang="en">Send</button>
+            </form>
+
+
+        </section>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Miguel Valverde Fuentes
+    </footer>
+</body>
+
+</html>
